@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+        <body class="body-home">
+            
+            <div id="align">
+            
+            <p><b><h2>Welcome! Please Log In To Get Started</h2></b></p>
+                <br/>
+            <form>
+                
+                <label for="usernameInput"><b>Username:</b></label><input type="text" id="usernameInput"/><br/><br/>
+                <label for="passwordInput"><b>Password:</b></label><input type="password" id="passwordInput"/><br/>
+                <p id="message"></p>
+                <br/><br/>
+                
+                <a id="button" href="#" onclick="verifyUser()">Log In</a>
+            </form></div>
+            
+            <script>
+            
+            function  verifyUser(){
+                var username = document.getElementById("usernameInput").value;
+                var password = document.getElementById("passwordInput").value;
+                
+                checkUserCreds(username, password);
+            }
+                
+            function checkUserCreds (username, password){
+               var systemUsername = "SherbanuB"
+               var systemPassword = "TheBux"
+               
+               if(username == systemUsername && password == systemPassword){
+                   document.getElementById("message").innerHTML = "Logging In..."
+               }
+                else{                   
+                 document.getElementById("message").innerHTML = "Incorrect Login Credentials, Please try again."
+                }   
+            }      
+            </script>
+    </body>
+</html>
